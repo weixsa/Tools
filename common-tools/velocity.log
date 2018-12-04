@@ -1,0 +1,96 @@
+2018-12-04 22:31:08,972 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-04 22:31:08,973 - Initializing Velocity, Calling init()...
+2018-12-04 22:31:08,973 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-04 22:31:08,973 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-04 22:31:08,973 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-04 22:31:08,973 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-04 22:31:08,973 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-04 22:31:08,977 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-04 22:31:08,983 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:31:09,015 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-04 22:31:09,017 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-04 22:31:09,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-04 22:31:09,020 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-04 22:31:09,021 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-04 22:31:09,022 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-04 22:31:09,023 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-04 22:31:09,025 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-04 22:31:09,027 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-04 22:31:09,029 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-04 22:31:09,077 - Created '20' parsers.
+2018-12-04 22:31:09,086 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-04 22:31:09,087 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-04 22:31:09,087 - Velocimacro : Default library not found.
+2018-12-04 22:31:09,087 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-04 22:31:09,087 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-04 22:31:09,087 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-04 22:31:09,087 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-04 22:31:09,145 - ResourceManager : found top/weixsa/code/utils/domain.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:31:09,280 - ResourceManager : found top/weixsa/code/utils/entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:31:09,291 - ResourceManager : unable to find resource 'top/weixsa/code/utils/XML_TEMP_FILE.vm' in any resource loader.
+2018-12-04 22:32:08,092 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-04 22:32:08,092 - Initializing Velocity, Calling init()...
+2018-12-04 22:32:08,092 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-04 22:32:08,092 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-04 22:32:08,092 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-04 22:32:08,092 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-04 22:32:08,092 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-04 22:32:08,092 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-04 22:32:08,095 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,103 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-04 22:32:08,104 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-04 22:32:08,105 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-04 22:32:08,106 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-04 22:32:08,106 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-04 22:32:08,107 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-04 22:32:08,107 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-04 22:32:08,108 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-04 22:32:08,109 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-04 22:32:08,110 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-04 22:32:08,131 - Created '20' parsers.
+2018-12-04 22:32:08,137 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-04 22:32:08,137 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-04 22:32:08,137 - Velocimacro : Default library not found.
+2018-12-04 22:32:08,137 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-04 22:32:08,138 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-04 22:32:08,138 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-04 22:32:08,138 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-04 22:32:08,160 - ResourceManager : found top/weixsa/code/utils/domain.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,201 - ResourceManager : found top/weixsa/code/utils/entity.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,218 - ResourceManager : found top/weixsa/code/utils/xml-mysql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 249, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 255, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 43] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 266, column 34] : ${item} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 270, column 25] : ${direction} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 33] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 49] : ${item.direction} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 287, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 293, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 43] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 311, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 317, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 43] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,226 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 328, column 34] : ${item} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 332, column 25] : ${direction} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 343, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 349, column 45] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 43] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 364, column 18] : ${item} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 372, column 30] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 379, column 30] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 30] : ${item.colName} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 47] : ${item.dbOp} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 391, column 18] : ${item} cannot be resolved.
+2018-12-04 22:32:08,227 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 398, column 18] : ${item} cannot be resolved.
+2018-12-04 22:32:08,228 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 402, column 13] : ${direction} cannot be resolved.
+2018-12-04 22:32:08,229 - ResourceManager : found top/weixsa/code/utils/dao.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,230 - ResourceManager : found top/weixsa/code/utils/dao.impl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,232 - ResourceManager : found top/weixsa/code/utils/service.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,236 - ResourceManager : found top/weixsa/code/utils/service.impl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,239 - ResourceManager : found top/weixsa/code/utils/controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-04 22:32:08,243 - Null reference [template 'top/weixsa/code/utils/controller.vm', line 40, column 9] : ${apipath} cannot be resolved.

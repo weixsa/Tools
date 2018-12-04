@@ -1,0 +1,10 @@
+package com.hsbank.service.${moduleName};
+
+import com.hsbank.domain.${moduleName}.${classname}Domain;
+import com.hsbank.core.entities.${moduleName}.${classname}Entity;
+import com.zhixin.core.service.IBaseService;
+ 
+ 
+public interface I${classname}Service extends IBaseService<${classname}Domain,${classname}Entity, Long>{
+	 
+}

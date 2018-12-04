@@ -1,0 +1,10 @@
+package com.hsbank.dao.${moduleName};
+
+import com.zhixin.core.dao.IBaseDao;
+import com.hsbank.core.entities.${moduleName}.${classname}Entity;
+
+
+public interface I${classname}Dao extends IBaseDao<${classname}Entity,Long> {    
+     
+ 
+}

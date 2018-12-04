@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.linkdsp.codehelper" > 
+	<!-- 声明sql  _databaseId  内置的参数 table_name自动封装的参数-->
+	<select id="getColumnInfo" parameterType="String"  resultType="map">
+	 <if test="_databaseId == 'MySQL'">
+		select distinct t.column_name,t.data_type,ifnull(t.numeric_scale,0) as scale,t.column_key,t.column_comment from columns t where lower(table_name)=#{table_name} 
+	</if>
+	 <if test="_databaseId == 'Oracle'">
+	     select c.COLUMN_NAME as "column_name", c.DATA_TYPE as "data_type",c.DATA_LENGTH as "data_length",c.DATA_PRECISION as "data_precision",nvl(c.data_scale,0) as "scale",nvl(a.column_key,' ') as "column_key",nvl(b.comments,' ')  as "column_comment"  
+              from user_tab_columns c,user_col_comments b,
+             (select t.column_name as column_name,'PRI' as column_key from user_cons_columns t where constraint_name = 
+(select constraint_name from user_constraints where table_name = upper(#{table_name}) and constraint_type ='P'))  a
+              where c.table_name = upper(#{table_name}) and c.TABLE_NAME = b.table_name and c.COLUMN_NAME = b.column_name and c.COLUMN_NAME = a.column_name(+)
+                                 order by c.column_id
+     </if>
+	</select> 
+</mapper>

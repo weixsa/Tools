@@ -1,0 +1,19 @@
+package com.hsbank.service.${moduleName}.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hsbank.dao.${moduleName}.I${classname}Dao;
+import com.hsbank.domain.${moduleName}.${classname}Domain;
+import com.hsbank.core.entities.${moduleName}.${classname}Entity;
+import com.hsbank.service.${moduleName}.I${classname}Service;
+import com.zhixin.core.service.impl.AbstractBaseService;
+ 
+@Service("${newclassname}ServiceImpl")
+public class ${classname}ServiceImpl extends 	AbstractBaseService<${classname}Domain,${classname}Entity, Long> implements I${classname}Service {
+
+	@ Autowired
+	public ${classname}ServiceImpl(I${classname}Dao ${newclassname}Dao ) {
+		super(${newclassname}Dao);
+	}
+}

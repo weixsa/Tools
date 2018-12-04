@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hsbank.dao.${moduleName}.impl.${classname}DaoImpl">
+	  <resultMap id="${tablename}_map" type="com.hsbank.core.entities.${moduleName}.${classname}Entity">
+		 #foreach($row in $collist)
+			<result property="${row.newfield_name}" column="${row.column_name}" /> 
+		#end 
+	</resultMap>
+	#set ($key=1)
+	#foreach($row in $collist)
+		#if(${row.column_key} == "PRI")
+			#if($key==1)
+				#set ($key=${row.column_name})
+			#else
+				#set ($key="$key,${row.column_name}")
+			#end
+		#end
+	#end	
+	
+	
+	
+	<sql id="Base_Column_List" >
+    #foreach($row in $collist)  
+			   #if($velocityCount==1)
+			     ${row.column_name}
+			   #else
+			   	 ,${row.column_name}
+			   #end
+		#end	  
+   </sql>
+
+   <sql id="Base_Mapper_Column_List" >
+    #foreach($row in $collist)  
+			#if($velocityCount==1)
+			     ${row.column_name} as ${row.newfield_name}
+			#else
+				,${row.column_name} as ${row.newfield_name}
+			#end 
+		#end	  
+   </sql>
+	
+	<insert id="create" parameterType="com.hsbank.core.entities.${moduleName}.${classname}Entity">
+		insert into  ${tablename} (
+			$key 
+			#foreach($row in $collist)
+				#if(${row.column_key} != "PRI" && ${row.newfield_name} != "createdTime" && ${row.newfield_name} != "updatedTime")
+					 <if test="${row.newfield_name} != null">
+					 ,${row.column_name}
+					 </if>
+				 #end 
+			#end 
+		) values ( 
+
+		#foreach($row in $collist)  
+			#if(${row.column_key} == "PRI") 
+				#if($velocityCount==1)
+			        #{${row.newfield_name}} 
+			    #else
+			    	 ,#{${row.newfield_name}} 
+			    #end
+			#end 
+		#end	 
+
+		#foreach($row in $collist)
+			#if(${row.column_key} != "PRI" && ${row.newfield_name} != "createdTime" && ${row.newfield_name} != "updatedTime")
+				<if test="${row.newfield_name} != null">
+					, #{${row.newfield_name}} 
+				</if>
+			#end 
+		#end 
+		)
+	</insert>
+	<update id="update" parameterType="com.hsbank.core.entities.${moduleName}.${classname}Entity">
+		update ${tablename}      
+	 <set> 
+     #foreach($row in $collist)  
+			#if(${row.column_key} != "PRI")
+			 #if(${row.newfield_name} != "createdBy" && ${row.newfield_name} != "createdTime"  && ${row.newfield_name} != "status" ) 
+				${row.column_name} =#{${row.newfield_name}}, 
+			  #end 
+			#end 
+		#end	  
+	</set> 
+     where 
+     	#set ($keyindex=0)
+		#foreach($row in $collist)  
+			#if(${row.column_key} == "PRI") 
+				#if($keyindex==0)
+			        ${row.column_name} = #{${row.newfield_name}}
+			    #else
+			    	 and ${row.column_name}= #{${row.newfield_name}}
+			    #end
+			    #set($keyindex=$keyindex+1) 
+			#end 
+		#end	 
+		
+	</update>
+	<update id="merge" parameterType="com.hsbank.core.entities.${moduleName}.${classname}Entity">
+		update ${tablename}      
+	 <set> 
+     #foreach($row in $collist)  
+			#if(${row.column_key} != "PRI")
+			 #if(${row.newfield_name} != "createdBy" && ${row.newfield_name} != "createdTime"     && ${row.newfield_name} != "status" ) 
+				<if test="${row.newfield_name} != null">  
+			        ${row.column_name} = #{${row.newfield_name}},
+			    </if>  
+			  #end 
+			#end 
+		#end	  
+	</set> 
+     where 
+     	#set ($keyindex=0)
+		#foreach($row in $collist)  
+			#if(${row.column_key} == "PRI") 
+				#if($keyindex==0)
+			        ${row.column_name} = #{${row.newfield_name}}
+			    #else
+			    	 and ${row.column_name}= #{${row.newfield_name}}
+			    #end
+			    #set($keyindex=$keyindex+1) 
+			#end 
+		#end	 
+		
+	</update>
+	<delete id="remove" parameterType="Long">
+		update  ${tablename}  set
+		 status= 0
+     where 
+     	#set ($keyindex=0)
+		#foreach($row in $collist)  
+			#if(${row.column_key} == "PRI") 
+				#if($keyindex==0)
+			        ${row.column_name} = #{${row.newfield_name}}
+			    #else
+			    	 and ${row.column_name}= #{${row.newfield_name}}
+			    #end
+			    #set($keyindex=$keyindex+1) 
+			#end 
+		#end	 
+	</delete>
+	<select id="findAll" resultMap="${tablename}_map">
+		 select <include refid="Base_Column_List" />	  from  ${tablename} where status!=0
+	</select> 
+	<select id="findByCustId" resultMap="${tablename}_map" parameterType="List">
+		     
+		select <include refid="Base_Column_List" />
+		from ${tablename} where 
+		cust_id = #{custId}
+		<if test="projectId != null">
+			and project_id = #{projectId}
+		</if>
+		<if test="projectId == null">
+			and project_id is null
+		</if>
+		<if test="version != null">
+			and version = #{version}
+		</if>
+		<if test="version == null">
+			and version is null
+		</if>
+		and status!=0
+	</select>
+	<delete id="removeByCustId" parameterType="Long">
+		update ${tablename} set
+		status= 0
+		where
+		cust_id = #{custId}
+		<if test="projectId != null">
+			and project_id = #{projectId}
+		</if>
+		<if test="projectId == null">
+			and project_id is null
+		</if>
+		<if test="version != null">
+			and version = #{version}
+		</if>
+		<if test="version == null">
+			and version is null
+		</if>
+	</delete>
+	<select id="find" resultMap="${tablename}_map" parameterType="Long">
+	  select <include refid="Base_Column_List" />	  from  ${tablename} where 
+     	#set ($keyindex=0)
+		#foreach($row in $collist)  
+			#if(${row.column_key} == "PRI") 
+				#if($keyindex==0)
+			        ${row.column_name} = #{${row.newfield_name}}
+			    #else
+			    	 and ${row.column_name}= #{${row.newfield_name}}
+			    #end
+			    #set($keyindex=$keyindex+1) 
+			#end 
+		#end	 
+		and  status!=0
+	</select> 
+	<select id="findByPKList" resultMap="${tablename}_map" parameterType="List">
+		 select <include refid="Base_Column_List" />  from  ${tablename} where 
+		#foreach($row in $collist)  
+			#if(${row.column_key} == "PRI") 
+			        ${row.column_name} in 
+			#end 
+		#end	 
+		<foreach collection="list" item="key" open="(" separator="," close=")">
+			#{key}
+		</foreach>
+		and status!=0 
+		
+	</select>
+	<select id="findByBeanProp" parameterType="com.hsbank.core.entities.${moduleName}.${classname}Entity" resultMap="${tablename}_map">
+		select <include refid="Base_Column_List" />	  from  ${tablename} where  status!=0
+		#foreach($row in $collist)  
+			#if(${row.coltype} == "String")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} like '%'||#{${row.newfield_name}}||'%' 
+			    </if>  
+			#end   
+		#if(${row.coltype} == "Integer" && ${row.column_name} != "status")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} = #{${row.newfield_name}}
+			    </if>  
+			#end   
+			#if(${row.coltype} == "Long")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} = #{${row.newfield_name}}
+			    </if>  
+			#end   
+		#end
+	</select>
+	<select id="findForPager" parameterType="map" resultMap="${tablename}_map">
+		select * from (select rownum row_seq, g.* from (
+		select <include refid="Base_Column_List" />	  from  ${tablename} where  status!=0
+		#foreach($row in $collist)  
+			#if(${row.coltype} == "String")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} like '%'||#{${row.newfield_name}}||'%' 
+			    </if>  
+			#end   
+			#if(${row.coltype} == "Integer" && ${row.column_name} != "status")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} = #{${row.newfield_name}} 
+			    </if>  
+			#end   
+			#if(${row.coltype} == "Long")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} = #{${row.newfield_name}} 
+			    </if>  
+			#end  
+		#end
+		) g) x where row_seq &gt; #{startNum} and row_seq &lt;= (#{startNum} + #{pageSize})
+	</select>
+	<select id="findForPagerCount" parameterType="com.hsbank.core.entities.${moduleName}.${classname}Entity" resultType="Integer"> 
+		select count(1) as count from  ${tablename} where  status!=0
+		#foreach($row in $collist)  
+			#if(${row.coltype} == "String")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} like '%'||#{${row.newfield_name}}||'%' 
+			    </if>  
+			#end 
+			#if(${row.coltype} == "Integer" && ${row.column_name} != "status")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} = #{${row.newfield_name}}
+			    </if>  
+			#end   
+			#if(${row.coltype} == "Long")
+				<if test="${row.newfield_name} != null">  
+			      and ${row.column_name} = #{${row.newfield_name}}
+			    </if>  
+			#end  
+		#end 
+	</select>
+	
+	<select id="dyFindForPager" parameterType="map" resultMap="${tablename}_map">
+		select * from (select rownum row_seq, g.* from (
+		select <include refid="Base_Column_List" /> from  ${tablename} where  status!=0
+		  		
+   		<if test = "conditionList != null">
+			 <foreach collection="conditionList" item="item" index="index"  >  
+	     			 
+			        <choose>  
+			            <when test="item.dbOp == 'in' ">  
+			               and ${item.colName}  IN   
+					     <foreach collection="item.value" item="key"  open="(" separator="," close=")">  
+					        #{key}  
+					     </foreach>  
+			            </when >  
+			            <when test="item.dbOp == 'like' ">  
+			             and   ${item.colName} like #{item.value}
+			            </when >   
+			            <otherwise>  
+			            and	 ${item.colName}  ${item.dbOp}  #{item.value}  
+			            </otherwise>  
+			        </choose>  
+	   		 </foreach>   
+		</if>
+		<if test ="order != null">
+			order by 
+			 <foreach collection="order" item="item" index="index" separator="," >  
+	     			${item}
+	   		 </foreach>   
+		</if>
+		<if test ="direction != null">
+			${direction}
+		</if>
+		<if test="compositeOrderList != null">
+			order by
+			<foreach collection="compositeOrderList" item="item" index="index" separator=",">
+				${item.colName} ${item.direction}
+			</foreach>
+		</if>
+		) g) x where row_seq &gt; #{startNum} and row_seq &lt;= (#{startNum} + #{pageSize})
+	</select>
+	<select id="dyFindForPagerCount" parameterType="map" resultType="Integer"> 
+		select count(1) as count from  ${tablename} where  status!=0
+		 <if test = "conditionList != null">
+			 <foreach collection="conditionList" item="item" index="index"  >  
+	     			 
+			        <choose>  
+			            <when test="item.dbOp == 'in' ">  
+			               and ${item.colName}  IN   
+					     <foreach collection="item.value" item="key"  open="(" separator="," close=")">  
+					        #{key}  
+					     </foreach>  
+			            </when >  
+			            <when test="item.dbOp == 'like' ">  
+			             and   ${item.colName} like  #{item.value} 
+			            </when >   
+			            <otherwise>  
+			            and	 ${item.colName}  ${item.dbOp}  #{item.value}  
+			            </otherwise>  
+			        </choose>  
+	   		 </foreach>   
+		</if>
+	</select>
+	
+	<select id="findForPagerMap" parameterType="map" resultType="map">
+		select * from (select rownum row_seq, g.* from (
+		select  <include refid="Base_Mapper_Column_List" /> from  ${tablename} where  status!=0
+		  		
+   		<if test = "conditionList != null">
+			 <foreach collection="conditionList" item="item" index="index"  >  
+	     			 
+			        <choose>  
+			            <when test="item.dbOp == 'in' ">  
+			               and ${item.colName}  IN   
+					     <foreach collection="item.value" item="key"  open="(" separator="," close=")">  
+					        #{key}  
+					     </foreach>  
+			            </when >  
+			            <when test="item.dbOp == 'like' ">  
+			             and   ${item.colName} like #{item.value}
+			            </when >   
+			            <otherwise>  
+			            and	 ${item.colName}  ${item.dbOp}  #{item.value}  
+			            </otherwise>  
+			        </choose>  
+	   		 </foreach>   
+		</if>
+		<if test ="order != null">
+			order by 
+			 <foreach collection="order" item="item" index="index" separator="," >  
+	     			${item}
+	   		 </foreach>   
+		</if>
+		<if test ="direction != null">
+			${direction}
+		</if>
+		) g) x where row_seq &gt; #{startNum} and row_seq &lt;= (#{startNum} + #{pageSize})
+	</select>
+	<select id="findForPagerMapCount" parameterType="map" resultType="Integer"> 
+		select count(1) as count from  ${tablename} where  status!=0
+		 <if test = "conditionList != null">
+			 <foreach collection="conditionList" item="item" index="index"  >  
+	     			 
+			        <choose>  
+			            <when test="item.dbOp == 'in' ">  
+			               and ${item.colName}  IN   
+					     <foreach collection="item.value" item="key"  open="(" separator="," close=")">  
+					        #{key}  
+					     </foreach>  
+			            </when >  
+			            <when test="item.dbOp == 'like' ">  
+			             and   ${item.colName} like  #{item.value} 
+			            </when >   
+			            <otherwise>  
+			            and	 ${item.colName}  ${item.dbOp}  #{item.value}  
+			            </otherwise>  
+			        </choose>  
+	   		 </foreach>   
+		</if>
+	</select>
+	<select id="countWithGroupBy" parameterType="map" resultType="map">
+        select  
+            count(1) as count
+         <if test="group_by != null">
+            <foreach collection="group_by" item="item" index="index" open=","
+                separator=",">
+                ${item}
+            </foreach>
+        </if>
+        from ${tablename} where status!=0
+        <if test="conditionList != null">
+            <foreach collection="conditionList" item="item" index="index"> 
+                <choose>
+                    <when test="item.dbOp == 'in' ">
+                        and ${item.colName} IN
+                        <foreach collection="item.value" item="key" open="("
+                            separator="," close=")">
+                            #{key}
+                        </foreach>
+                    </when>
+                    <when test="item.dbOp == 'like' ">
+                        and ${item.colName} like #{item.value} 
+                    </when>
+                    <otherwise>
+                        and ${item.colName} ${item.dbOp} #{item.value}
+                    </otherwise>
+                </choose>
+            </foreach>
+        </if>
+        <if test="group_by != null">
+            group by
+            <foreach collection="group_by" item="item" index="index"
+                separator=",">
+                ${item}
+            </foreach>
+        </if>
+          <if test="order != null">
+            order by
+            <foreach collection="order" item="item" index="index"
+                separator=",">
+                ${item}
+            </foreach>
+        </if>
+        <if test="direction != null">
+            ${direction}
+        </if>
+    </select>
+	 
+</mapper>

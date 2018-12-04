@@ -1,0 +1,54 @@
+
+package com.hsbank.core.entities.${moduleName};
+
+import java.io.Serializable; 
+
+import com.alibaba.fastjson.annotation.JSONField;
+import com.zhixin.core.entities.AbstractEntity;
+${import}
+
+//${tableDesc}
+public class ${classname}Entity extends AbstractEntity<Long> implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	#foreach($row in $collist)
+	 #if(${row.newfield_name} != "createdBy" && ${row.newfield_name} != "updatedBy"
+		 	 && ${row.newfield_name} != "createdTime" && ${row.newfield_name} != "updatedTime"
+		 	  && ${row.newfield_name} != "ordnum" && ${row.newfield_name} != "status" )
+	
+	//${row.column_comment}
+	private ${row.coltype} ${row.newfield_name} #if(${row.coltype}=="int" || ${row.coltype}=="long")=-1#end;
+		#end
+	#end	
+		#foreach($row in $collist)
+		 #if(${row.newfield_name} != "createdBy" && ${row.newfield_name} != "updatedBy"
+		 	 && ${row.newfield_name} != "createdTime" && ${row.newfield_name} != "updatedTime"
+		 	  && ${row.newfield_name} != "ordnum" && ${row.newfield_name} != "status" )
+		 	  
+	public void set${row.newcolumn_name}(${row.coltype}  ${row.newfield_name}){
+		this.${row.newfield_name} = ${row.newfield_name};
+	}
+	
+	public ${row.coltype} get${row.newcolumn_name}(){
+		return this.${row.newfield_name};
+	}
+		#end
+	#end	
+	#set ($key=1)
+	#foreach($row in $collist)
+		#if(${row.column_key} == "PRI")
+			#set ($key=${row.newfield_name})
+		#end
+	#end
+		
+	@JSONField(serialize = false)
+	@Override
+	public void setPK(Long pk) {
+		this.id = pk;
+	}
+
+	@Override
+	public Long getPK() {
+		return id;
+	}
+}

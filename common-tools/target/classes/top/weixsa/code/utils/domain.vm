@@ -1,0 +1,39 @@
+package com.hsbank.domain.${moduleName};
+
+import java.io.Serializable;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import com.zhixin.core.domain.AbstractDomain;
+${import}
+
+@ApiModel(value = "${tableDesc}", description = "${tableDesc}")
+public class ${classname}Domain  extends AbstractDomain<Long>  implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	#foreach($row in $collist)
+	 #if(${row.newfield_name} != "createdBy" && ${row.newfield_name} != "updatedBy"
+		 	 && ${row.newfield_name} != "createdTime" && ${row.newfield_name} != "updatedTime"
+		 	  && ${row.newfield_name} != "ordnum" && ${row.newfield_name} != "status" )
+		
+	@ApiModelProperty("${row.column_comment}")
+	private ${row.coltype} ${row.newfield_name} #if(${row.coltype}=="int" || ${row.coltype}=="long")=-1#end;
+		#end
+	#end	
+		#foreach($row in $collist)
+		 #if(${row.newfield_name} != "createdBy" && ${row.newfield_name} != "updatedBy"
+		 	 && ${row.newfield_name} != "createdTime" && ${row.newfield_name} != "updatedTime"
+		 	  && ${row.newfield_name} != "ordnum" && ${row.newfield_name} != "status" )
+		 	  
+	public void set${row.newcolumn_name}(${row.coltype}  ${row.newfield_name}){
+		this.${row.newfield_name} = ${row.newfield_name};
+	}
+		
+	public ${row.coltype} get${row.newcolumn_name}(){
+		return this.${row.newfield_name};
+	}
+		#end
+	#end	
+	
+}
+
