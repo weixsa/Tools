@@ -40,8 +40,8 @@ public class CodeGeneratorUtil {
 //	private static String RESOURCE_PATH = "top/weixsa/code/utils/"; //resource路径
 	//方法入口
 	public static void main(String[] args) throws Exception {
-		String tablename = "point_exch_cond"; // 数据库表名
-		String classname = "cond"; // 类前置（即：子模块名）
+		String tablename = "POINT_EXCH_GOODS_CTLG"; // 数据库表名
+		String classname = "GOODSCFL"; // 类前置（即：子模块名）
 		String moduleName = "start"; // 模块名
 		String tableDesc = "测试用户表"; // 当前业务模块的概要想描述（表描述）
 		
@@ -121,38 +121,39 @@ public class CodeGeneratorUtil {
 	
 	private static void genCode(Context context,String moduleName,String classname) throws ResourceNotFoundException, ParseErrorException, Exception{
 		String path="";
-		
-		// 生成实体类domain
-		path=ROOT_PATH + "/crm-domain/src/main/java/com/hsbank/domain/" + moduleName + "/"
-					+ classname + "Domain.java";
-		genertorByType(context,moduleName,classname,"domain",path);
-		// 生成Entity
-		path=ROOT_PATH + "/crm-core/src/main/java/com/hsbank/core/entities/" + moduleName
-				+ "/" + classname + "Entity.java";
-		genertorByType(context,moduleName,classname,"entity",path);
-		// 生成实体类
-		path=ROOT_PATH + "/crm-data-service/src/main/java/com/hsbank/dao/" + moduleName
-							+ "/impl/" + classname + ".map.xml";
+//		
+//		// 生成实体类domain
+//		path=ROOT_PATH + "/crm-domain/src/main/java/com/hsbank/domain/" + moduleName + "/"
+//					+ classname + "Domain.java";
+//		genertorByType(context,moduleName,classname,"domain",path);
+//		// 生成Entity
+//		path=ROOT_PATH + "/crm-core/src/main/java/com/hsbank/core/entities/" + moduleName
+//				+ "/" + classname + "Entity.java";
+//		genertorByType(context,moduleName,classname,"entity",path);
+//		// 生成实体类
+//		path=ROOT_PATH + "/crm-data-service/src/main/java/com/hsbank/dao/" + moduleName
+//							+ "/impl/" + classname + ".map.xml";
+		path=ROOT_PATH  + classname + ".map.xml";
 		genertorByType(context,moduleName,classname,XML_TEMP_FILE,path);
 		// 生成DAO
-		path=ROOT_PATH + "/crm-data-service/src/main/java/com/hsbank/dao/" + moduleName + "/I"
-				+ classname + "Dao.java";
-        genertorByType(context,moduleName,classname,"dao",path);
-        path=ROOT_PATH + "/crm-data-service/src/main/java/com/hsbank/dao/" + moduleName + "/impl/"
-				+ classname + "DaoImpl.java";
-        genertorByType(context,moduleName,classname,"dao.impl",path);
-		// 生成service层
-		path=ROOT_PATH + "/crm-business-service/src/main/java/com/hsbank/service/"
-				+ moduleName + "/I" + classname + "Service.java";
-		genertorByType(context,moduleName,classname,"service",path);
-		path=ROOT_PATH + "/crm-business-service/src/main/java/com/hsbank/service/" + moduleName
-				+ "/impl/" + classname + "ServiceImpl.java";
-		genertorByType(context,moduleName,classname,"service.impl",path);
-		// 生成RESTFulAPI层
-		//context.put("moduleName", moduleName.replace(".", "/"));
-		path=ROOT_PATH + "/crm-resource/src/main/java/com/hsbank/rs/resources/" + moduleName
-				+ "/" + classname + "Resource.java";
-		genertorByType(context,moduleName,classname,"controller",path);
+//		path=ROOT_PATH + "/crm-data-service/src/main/java/com/hsbank/dao/" + moduleName + "/I"
+//				+ classname + "Dao.java";
+//        genertorByType(context,moduleName,classname,"dao",path);
+//        path=ROOT_PATH + "/crm-data-service/src/main/java/com/hsbank/dao/" + moduleName + "/impl/"
+//				+ classname + "DaoImpl.java";
+//        genertorByType(context,moduleName,classname,"dao.impl",path);
+//		// 生成service层
+//		path=ROOT_PATH + "/crm-business-service/src/main/java/com/hsbank/service/"
+//				+ moduleName + "/I" + classname + "Service.java";
+//		genertorByType(context,moduleName,classname,"service",path);
+//		path=ROOT_PATH + "/crm-business-service/src/main/java/com/hsbank/service/" + moduleName
+//				+ "/impl/" + classname + "ServiceImpl.java";
+//		genertorByType(context,moduleName,classname,"service.impl",path);
+//		// 生成RESTFulAPI层
+//		//context.put("moduleName", moduleName.replace(".", "/"));
+//		path=ROOT_PATH + "/crm-resource/src/main/java/com/hsbank/rs/resources/" + moduleName
+//				+ "/" + classname + "Resource.java";
+//		genertorByType(context,moduleName,classname,"controller",path);
 	}
 	
 	/**

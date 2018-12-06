@@ -94,3 +94,293 @@
 2018-12-04 22:32:08,236 - ResourceManager : found top/weixsa/code/utils/service.impl.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 2018-12-04 22:32:08,239 - ResourceManager : found top/weixsa/code/utils/controller.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 2018-12-04 22:32:08,243 - Null reference [template 'top/weixsa/code/utils/controller.vm', line 40, column 9] : ${apipath} cannot be resolved.
+2018-12-05 10:39:34,435 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-05 10:39:34,436 - Initializing Velocity, Calling init()...
+2018-12-05 10:39:34,437 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-05 10:39:34,437 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-05 10:39:34,437 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-05 10:39:34,437 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-05 10:39:34,437 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-05 10:39:34,437 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-05 10:39:34,440 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-05 10:39:34,449 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-05 10:39:34,450 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-05 10:39:34,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-05 10:39:34,451 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-05 10:39:34,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-05 10:39:34,452 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-05 10:39:34,453 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-05 10:39:34,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-05 10:39:34,454 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-05 10:39:34,455 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-05 10:39:34,476 - Created '20' parsers.
+2018-12-05 10:39:34,480 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-05 10:39:34,481 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-05 10:39:34,481 - Velocimacro : Default library not found.
+2018-12-05 10:39:34,481 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-05 10:39:34,481 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-05 10:39:34,481 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-05 10:39:34,481 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-05 10:39:34,518 - ResourceManager : found top/weixsa/code/utils/xml-mysql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-05 10:39:34,530 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 249, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,530 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 255, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,530 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 266, column 34] : ${item} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 270, column 25] : ${direction} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 33] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 49] : ${item.direction} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 287, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 293, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 311, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 317, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 328, column 34] : ${item} cannot be resolved.
+2018-12-05 10:39:34,531 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 332, column 25] : ${direction} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 343, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 349, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 364, column 18] : ${item} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 372, column 30] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 379, column 30] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 30] : ${item.colName} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 47] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 391, column 18] : ${item} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 398, column 18] : ${item} cannot be resolved.
+2018-12-05 10:39:34,532 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 402, column 13] : ${direction} cannot be resolved.
+2018-12-05 10:40:00,593 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-05 10:40:00,594 - Initializing Velocity, Calling init()...
+2018-12-05 10:40:00,594 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-05 10:40:00,594 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-05 10:40:00,594 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-05 10:40:00,594 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-05 10:40:00,594 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-05 10:40:00,594 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-05 10:40:00,597 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-05 10:40:00,606 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-05 10:40:00,607 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-05 10:40:00,608 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-05 10:40:00,608 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-05 10:40:00,609 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-05 10:40:00,609 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-05 10:40:00,610 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-05 10:40:00,610 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-05 10:40:00,611 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-05 10:40:00,612 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-05 10:40:00,633 - Created '20' parsers.
+2018-12-05 10:40:00,637 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-05 10:40:00,637 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-05 10:40:00,637 - Velocimacro : Default library not found.
+2018-12-05 10:40:00,637 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-05 10:40:00,637 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-05 10:40:00,637 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-05 10:40:00,637 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-05 10:40:00,672 - ResourceManager : found top/weixsa/code/utils/xml-mysql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-05 10:40:00,785 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 249, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,786 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 255, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,786 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,786 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:40:00,786 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 266, column 34] : ${item} cannot be resolved.
+2018-12-05 10:40:00,786 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 270, column 25] : ${direction} cannot be resolved.
+2018-12-05 10:40:00,786 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 33] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 49] : ${item.direction} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 287, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 293, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 311, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,787 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 317, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 328, column 34] : ${item} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 332, column 25] : ${direction} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 343, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 349, column 45] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 43] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,788 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 364, column 18] : ${item} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 372, column 30] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 379, column 30] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 30] : ${item.colName} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 47] : ${item.dbOp} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 391, column 18] : ${item} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 398, column 18] : ${item} cannot be resolved.
+2018-12-05 10:40:00,789 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 402, column 13] : ${direction} cannot be resolved.
+2018-12-06 10:09:50,381 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-06 10:09:50,382 - Initializing Velocity, Calling init()...
+2018-12-06 10:09:50,382 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-06 10:09:50,382 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-06 10:09:50,382 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-06 10:09:50,382 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-06 10:09:50,382 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-06 10:09:50,382 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-06 10:09:50,385 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-06 10:09:50,424 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-06 10:09:50,425 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-06 10:09:50,426 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-06 10:09:50,427 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-06 10:09:50,428 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-06 10:09:50,429 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-06 10:09:50,430 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-06 10:09:50,431 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-06 10:09:50,432 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-06 10:09:50,433 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-06 10:09:50,454 - Created '20' parsers.
+2018-12-06 10:09:50,458 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-06 10:09:50,459 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-06 10:09:50,459 - Velocimacro : Default library not found.
+2018-12-06 10:09:50,459 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-06 10:09:50,460 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-06 10:09:50,460 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-06 10:09:50,460 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-06 10:09:50,495 - ResourceManager : found top/weixsa/code/utils/xml-mysql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 249, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 255, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 266, column 34] : ${item} cannot be resolved.
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 270, column 25] : ${direction} cannot be resolved.
+2018-12-06 10:09:50,498 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 33] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 49] : ${item.direction} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 287, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 293, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 311, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 317, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 328, column 34] : ${item} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 332, column 25] : ${direction} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 343, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 349, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:09:50,499 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 364, column 18] : ${item} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 372, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 379, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 47] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 391, column 18] : ${item} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 398, column 18] : ${item} cannot be resolved.
+2018-12-06 10:09:50,500 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 402, column 13] : ${direction} cannot be resolved.
+2018-12-06 10:10:38,760 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-06 10:10:38,760 - Initializing Velocity, Calling init()...
+2018-12-06 10:10:38,760 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-06 10:10:38,760 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-06 10:10:38,760 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-06 10:10:38,761 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-06 10:10:38,761 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-06 10:10:38,761 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-06 10:10:38,763 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-06 10:10:38,772 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-06 10:10:38,773 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-06 10:10:38,774 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-06 10:10:38,774 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-06 10:10:38,775 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-06 10:10:38,775 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-06 10:10:38,776 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-06 10:10:38,777 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-06 10:10:38,778 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-06 10:10:38,778 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-06 10:10:38,800 - Created '20' parsers.
+2018-12-06 10:10:38,805 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-06 10:10:38,806 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-06 10:10:38,806 - Velocimacro : Default library not found.
+2018-12-06 10:10:38,806 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-06 10:10:38,806 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-06 10:10:38,806 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-06 10:10:38,806 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-06 10:10:38,840 - ResourceManager : found top/weixsa/code/utils/xml-mysql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-06 10:10:38,924 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 249, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,924 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 255, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,924 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,924 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:10:38,924 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 266, column 34] : ${item} cannot be resolved.
+2018-12-06 10:10:38,924 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 270, column 25] : ${direction} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 33] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 49] : ${item.direction} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 287, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 293, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 311, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 317, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 328, column 34] : ${item} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 332, column 25] : ${direction} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 343, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 349, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 364, column 18] : ${item} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 372, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 379, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 47] : ${item.dbOp} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 391, column 18] : ${item} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 398, column 18] : ${item} cannot be resolved.
+2018-12-06 10:10:38,925 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 402, column 13] : ${direction} cannot be resolved.
+2018-12-06 15:05:34,154 - Log4JLogChute initialized using file 'velocity.log'
+2018-12-06 15:05:34,154 - Initializing Velocity, Calling init()...
+2018-12-06 15:05:34,154 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-12-06 15:05:34,154 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-12-06 15:05:34,154 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-12-06 15:05:34,154 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-12-06 15:05:34,154 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-06 15:05:34,154 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-12-06 15:05:34,158 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-06 15:05:34,179 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-12-06 15:05:34,181 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-12-06 15:05:34,181 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-12-06 15:05:34,182 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-12-06 15:05:34,182 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-12-06 15:05:34,183 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-12-06 15:05:34,184 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-12-06 15:05:34,185 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-12-06 15:05:34,186 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-12-06 15:05:34,187 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-12-06 15:05:34,209 - Created '20' parsers.
+2018-12-06 15:05:34,214 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-12-06 15:05:34,215 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-12-06 15:05:34,215 - Velocimacro : Default library not found.
+2018-12-06 15:05:34,215 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-12-06 15:05:34,216 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-12-06 15:05:34,216 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-12-06 15:05:34,216 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-12-06 15:05:34,274 - ResourceManager : found top/weixsa/code/utils/xml-mysql.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 249, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 255, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 258, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 266, column 34] : ${item} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 270, column 25] : ${direction} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 33] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 275, column 49] : ${item.direction} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 287, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 293, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 296, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 311, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 317, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 320, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 15:05:34,287 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 328, column 34] : ${item} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 332, column 25] : ${direction} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 343, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 349, column 45] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 43] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 352, column 61] : ${item.dbOp} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 364, column 18] : ${item} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 372, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 379, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 30] : ${item.colName} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 382, column 47] : ${item.dbOp} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 391, column 18] : ${item} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 398, column 18] : ${item} cannot be resolved.
+2018-12-06 15:05:34,288 - Null reference [template 'top/weixsa/code/utils/xml-mysql.vm', line 402, column 13] : ${direction} cannot be resolved.
